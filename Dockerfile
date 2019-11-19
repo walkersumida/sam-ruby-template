@@ -40,3 +40,7 @@ RUN pip3.7 install aws-sam-cli
 RUN sam --version
 
 WORKDIR /app
+COPY . .
+
+RUN cd /app/sam-app && bundle install
+RUN cd /app/sam-app/hello_world && bundle install
