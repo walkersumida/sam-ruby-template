@@ -8,6 +8,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    entrypoint: bash -c "sh run.sh && /bin/bash"
+    # entrypoint: bash -c "sh run.sh && /bin/bash" # for docker running
     volumes:
       - .:/app
