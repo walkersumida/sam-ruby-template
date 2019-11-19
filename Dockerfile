@@ -4,7 +4,7 @@ ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV PYTHON_VERSION 3.6.0
+ENV PYTHON_VERSION 3.7.5
 RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get update
 RUN apt-get install -y software-properties-common \
@@ -36,7 +36,7 @@ RUN wget https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSIO
         && make altinstall
 ENV PYTHONIOENCODING "utf-8"
 
-RUN pip3.6 install aws-sam-cli
+RUN pip3.7 install aws-sam-cli
 RUN sam --version
 
 WORKDIR /app
